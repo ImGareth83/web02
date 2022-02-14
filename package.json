@@ -1,0 +1,17 @@
+{
+  "name": "web02",
+  "version": "1.0.0",
+  "description": "Find My Hat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "main":"node index.js"
+  },
+  "keywords": [],
+  "author": "Gareth Fong",
+  "license": "ISC",
+  "dependencies": {
+    "clear-screen": "^1.0.0",
+    "prompt-sync": "^4.2.0"
+  }
+}
