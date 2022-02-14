@@ -53,6 +53,9 @@ class Field {
         //Avoid hat on 0,0
         }while(!x==0 && y==0);
 
+        this.hatX=x;
+        this.hatY=y;
+
         this.field[x][y]= HAT;
     }
 
@@ -67,8 +70,6 @@ class Field {
             if((x==0 && y==0) || (x==this.hatX && y==this.hatY)) continue;
 
             this.field[x][y]=HOLE;
-            this.hatX=x;
-            this.hatY=y;
         }
     }
 
