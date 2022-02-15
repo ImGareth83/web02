@@ -79,7 +79,7 @@ class Field {
 
         this.field[newX][this.locationY]=STAR;
         this.locationX=newX;
-        return Field.OK; //move up successful
+        return code; //move up successful
 
     }
 
