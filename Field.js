@@ -51,7 +51,7 @@ class Field {
             y = this.randomNumber(0, rows);
 
         //Avoid hat on 0,0
-        }while(!x==0 && y==0);
+        }while(x==0 && y==0);
 
         this.hatX=x;
         this.hatY=y;
