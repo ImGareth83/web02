@@ -77,6 +77,9 @@ class Field {
         let newX = this.locationX-1;
         let code = this.move(newX, this.locationY);
 
+        //out of bounds or fell in hole
+        if(code==Field.FELL_INTO_HOLE || code==Field.OUT_OF_BOUNDS) return code;
+
         this.field[newX][this.locationY]=STAR;
         this.locationX=newX;
         return code; //move up successful
@@ -87,6 +90,9 @@ class Field {
         let newX = this.locationX + 1;
         let code =this.move(newX, this.locationY);
 
+        //out of bounds or fell in hole
+        if(code==Field.FELL_INTO_HOLE || code==Field.OUT_OF_BOUNDS) return code;
+
         this.field[newX][this.locationY]=STAR;
         this.locationX=newX;
         return code;
@@ -95,6 +101,9 @@ class Field {
     moveLeft(){
         let newY = this.locationY-1;
         let code = this.move(this.locationX, newY);
+
+        //out of bounds or fell in hole
+        if(code==Field.FELL_INTO_HOLE || code==Field.OUT_OF_BOUNDS) return code;
 
         this.field[this.locationX][newY]=STAR;
         this.locationY=newY;
@@ -105,6 +114,9 @@ class Field {
     moveRight(){
         let newY = this.locationY+1;
         let code = this.move(this.locationX, newY);
+
+        //out of bounds or fell in hole
+        if(code==Field.FELL_INTO_HOLE || code==Field.OUT_OF_BOUNDS) return code;
 
         this.field[this.locationX][newY]=STAR;
         this.locationY=newY;
